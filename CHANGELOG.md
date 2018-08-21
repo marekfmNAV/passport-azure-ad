@@ -1,4 +1,63 @@
-<a name="3.0.8"></a>
+<a name="4.0.0"></a>
+
+# 4.0.0
+### Breaking change
+* Passport-azure-ad will only support node.js version 6 and above from this release.
+
+### Fixed security vulnerability
+* [#383](https://github.com/AzureAD/passport-azure-ad/issues/383) Update base64url to fix vulnerability
+
+
+# 3.0.12
+
+## Breaking change
+
+* Added option 'loggingNoPII' to OIDCStrategy and BearerStrategy per Microsoft policy. 
+
+If this is set to true, then Passport-azure-ad won't log anything related to
+personal identification information, such as id_token, claims, etc. The default value is true. If you want the full log as before, you 
+have to explicitly set 'loggingNoPII' to false in the constructor of OIDCStrategy and BearerStrategy.
+
+# 3.0.11
+
+## OIDCStrategy
+
+### Bug fixes
+
+* [#365](https://github.com/AzureAD/passport-azure-ad/issues/365) Metadata caching in Bearer Strategy breaks and cannot be recovered if request fails
+
+## BearerStrategy
+
+### Bug fixes
+
+* [#365](https://github.com/AzureAD/passport-azure-ad/issues/365) Metadata caching in Bearer Strategy breaks and cannot be recovered if request fails
+
+# 3.0.10
+
+## BearerStrategy
+
+### New features
+
+* [#354](https://github.com/AzureAD/passport-azure-ad/issues/354) Support passing tenant name or id in BearerStrategy
+
+# 3.0.9
+
+## OIDCStrategy
+
+### Bug fixes
+
+* [#338](https://github.com/AzureAD/passport-azure-ad/issues/338) Allow query parameters in the identityMetadata config key
+
+* [#346](https://github.com/AzureAD/passport-azure-ad/pull/346) Fix: Cannot set cookie on the response 
+
+## BearerStrategy
+
+### Bug fixes
+
+* [#333](https://github.com/AzureAD/passport-azure-ad/issues/333) jwt should not check sub for access token 
+
+* [#338](https://github.com/AzureAD/passport-azure-ad/issues/338) Allow query parameters in the identityMetadata config key
+
 # 3.0.8
 
 ## OIDCStrategy
